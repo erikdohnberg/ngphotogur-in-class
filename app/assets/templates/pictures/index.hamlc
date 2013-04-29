@@ -1,2 +1,13 @@
 %h1 Page is index.hamlc
 %a{:href => "/pictures/new"} New Picture
+
+/ %p {{name}}
+/ %input{:"ng-model" => "name"}
+/ %p{:"ng-show" => "isHomer()"} {{name}} simpson
+/ %p{:"ng-show" => "!isHomer()"} {{name}}
+
+%div{:"ng-repeat" => "pictures in pictures"}
+  %h2 {{pictures.title}}
+  %h4 By: {{pictures.artist}}
+  %img{:"ng-src" => "{{pictures.url}}"}
+  %hr
