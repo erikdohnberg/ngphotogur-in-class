@@ -6,8 +6,8 @@
 / %p{:"ng-show" => "isHomer()"} {{name}} simpson
 / %p{:"ng-show" => "!isHomer()"} {{name}}
 
-%div{:"ng-repeat" => "pictures in pictures"}
-  %h2 {{pictures.title}}
-  %h4 By: {{pictures.artist}}
-  %img{:"ng-src" => "{{pictures.url}}"}
+%div{:"ng-repeat" => "picture in pictures"}
+  %h2 {{picture.title}}
+  %h4 By: {{picture.artist}}
+  %img{:"ng-src" => "{{picture.url}}"}
   %hr
