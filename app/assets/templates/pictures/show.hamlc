@@ -1,6 +1,7 @@
 %p
-  %a{:href => "/pictures"} Back to Pictures
-%div.span6
-  %h2 {{picture.title}}
-  %h4 By: {{picture.artist}}
-  %img{:"ng-src" => "{{picture.url}}"}
+  %a{:href => "/"} Back to Pictures
+%div.error{:"ng-show" => "errorMessage"}
+  {{errorMessage}}
+%h2 {{picture.title}}
+%h4 By: {{picture.artist}}
+%img{:"ng-src" => "{{picture.url}}"}

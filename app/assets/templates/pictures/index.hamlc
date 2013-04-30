@@ -8,9 +8,9 @@
   / %p{:"ng-show" => "!isHomer()"} {{name}}
 
   %div.span6{:"ng-repeat" => "picture in pictures"}
-    %a{:href => "/pictures/1"}
+    %a{:href => "/pictures/{{picture.id}}"} 
       %h2 {{picture.title}}
     %h4 By: {{picture.artist}}
-    %a{:href => "/pictures/1"} 
+    %a{:href => "/pictures/{{picture.id}}"}
       %img{:"ng-src" => "{{picture.url}}"}
     %hr
