@@ -1,1 +1,22 @@
-%h1 Page is edit.hamlc
+%a{:href => "/"} Back to Pictures
+%h1 Editing {{picture.title}}
+
+%p
+  %label Title
+  %input{:type => "text", :"ng-model" => "picture.title"}
+  %span{:"ng-show" => "errors.title"}
+    %br
+      Title {{errors.title.join(", ")}}
+
+%p
+  %label Artist
+  %input{:type => "text", :"ng-model" => "picture.artist"}
+
+%p
+  %label URL
+  %input{:type => "text", :"ng-model" => "picture.url"}
+  %span{:"ng-show" => "errors.url"}
+    %br
+      URL {{errors.url.join(", ")}}
+
+%button{:"ng-click" => "updatePicture()"} Save

@@ -1,13 +1,12 @@
 %a{:href => "/"} Back to Pictures
 %h1 Add a new image
-
 %p
   %label Title
   %br
   %input{:type => "text", :"ng-model" => "newPicture.title"}
   %span{:"ng-show" => "errors.title"}
     %br
-      Title {{errors.title.join(", ")}}
+    Title {{errors.title.join(", ")}}
 
 %p
   %label Artist
@@ -20,7 +19,7 @@
   %input{:type => "url", :"ng-model" => "newPicture.url"}
   %span{:"ng-show" => "errors.url"}
     %br
-      URL {{errors.url.join(", ")}}
+    URL {{errors.url.join(", ")}}
 
 %p
   %label Is this image copyrighted?
@@ -29,3 +28,9 @@
   Yes
 
 %button{:"ng-click" => "savePicture()"} Save
+
+%h3 Post Preview:
+  %h4 {{newPicture.title}}
+  {{newPicture.artist}}
+  %br
+  %img{:"ng-src" => "{{newPicture.url}}"}

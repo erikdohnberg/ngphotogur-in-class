@@ -14,3 +14,4 @@
     %a{:href => "/pictures/{{picture.id}}"}
       %img{:"ng-src" => "{{picture.url}}"}
     %hr
+    %a{:href => "/pictures/{{picture.id}}/edit"} Edit Picture
