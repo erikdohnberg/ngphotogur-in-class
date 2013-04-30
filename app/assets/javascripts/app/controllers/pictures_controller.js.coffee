@@ -9,7 +9,7 @@
   $scope.savePicture = ->
     Picture.save($scope.newPicture, (data) ->
       console.log("This works")
-    ,(data) ->
-      alert("Could not save picture")
+    ,(response) ->
+      $scope.errors = response.data.errors
     )
 )
