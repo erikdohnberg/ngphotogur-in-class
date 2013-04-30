@@ -1,3 +1,4 @@
+%a{:href => "/"} Back to Pictures
 %h1 Add a new image
 
 %p
@@ -11,8 +12,14 @@
   %input{:type => "text", :"ng-model" => "newPicture.artist"}
 
 %p
-  %label url
+  %label Image URL
   %br
-  %input{:type => "text", :"ng-model" => "newPicture.url"}
+  %input{:type => "url", :"ng-model" => "newPicture.url"}
 
-%button{:"ng-click" => "savePicture"} Save
+%p
+  %label Is this image copyrighted?
+  %br
+  %input{:type => "checkbox", :"ng-model" => "newPicture.copyright"}
+  Yes
+
+%button{:"ng-click" => "savePicture()"} Save

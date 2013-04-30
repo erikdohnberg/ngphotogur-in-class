@@ -2,11 +2,14 @@
   $scope.pictures = Picture.query(
     (data) ->
       console.log("Success!!")
-    ,
-    (data) ->
+    ,(data) ->
       alert("Could not retrieve Picture data.")
   )
 
   $scope.savePicture = ->
-    console.log "The picture is ", $scope.newPicture
+    Picture.save($scope.newPicture, (data) ->
+      console.log("This works")
+    ,(data) ->
+      alert("Could not save picture")
+    )
 )
