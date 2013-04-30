@@ -1,13 +1,16 @@
-%h1 Page is index.hamlc
-%a{:href => "/pictures/new"} New Picture
+%div.span12
+  %h1 All Pictures
+  %a{:href => "/pictures/new"} New Picture
 
-/ %p {{name}}
-/ %input{:"ng-model" => "name"}
-/ %p{:"ng-show" => "isHomer()"} {{name}} simpson
-/ %p{:"ng-show" => "!isHomer()"} {{name}}
+  / %p {{name}}
+  / %input{:"ng-model" => "name"}
+  / %p{:"ng-show" => "isHomer()"} {{name}} simpson
+  / %p{:"ng-show" => "!isHomer()"} {{name}}
 
-%div{:"ng-repeat" => "picture in pictures"}
-  %h2 {{picture.title}}
-  %h4 By: {{picture.artist}}
-  %img{:"ng-src" => "{{picture.url}}"}
-  %hr
+  %div.span6{:"ng-repeat" => "picture in pictures"}
+    %a{:href => "/pictures/1"}
+      %h2 {{picture.title}}
+    %h4 By: {{picture.artist}}
+    %a{:href => "/pictures/1"} 
+      %img{:"ng-src" => "{{picture.url}}"}
+    %hr
